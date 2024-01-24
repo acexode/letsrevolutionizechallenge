@@ -1,17 +1,17 @@
 const axios = require('axios');
 
-const INIT_URL = 'http://letsrevolutionizetesting.com/challenge.json';
 
 async function fetchChallenge(url) {
-  try {
-    const response = await axios.get(url, { responseType: 'json' });
+    try {
+        const response = await axios.get(url, { responseType: 'json' });
     return response.data;
   } catch (error) {
-    throw error;
-  }
+      throw error;
+    }
 }
+const endpoint = 'http://letsrevolutionizetesting.com/challenge.json';
 
-async function followChallengeChain(url = INIT_URL) {
+async function followChallengeChain(url = endpoint) {
   try {
     const challenge = await fetchChallenge(url);
     console.log(challenge);
