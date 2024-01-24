@@ -30,7 +30,7 @@ async function followChallengeChain(url = INIT_URL) {
 (async () => {
   try {
     const result = await followChallengeChain();
-    console.log('final result is', result);
+    console.log('the result is', result);
     process.exit(0);
   } catch (err) {
     console.error(err);
